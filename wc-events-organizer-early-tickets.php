@@ -34,7 +34,10 @@ function wc_early_ticket_load_admin_init() {
 }
 
 add_action('init', 'wc_early_tickets_make_early');
-function wc_early_tickets_make_early() {
+function wc_early_tickets_make_early() {/*
+
+	NEED TO FIX THIS
+
 	$early_ticket_options = get_option('wc_early_tickets');
 	if ( $early_ticket_options['active'] === 'on' ) {
 		$event_ticket = new Tribe__Events__Tickets__Woo__Main();
@@ -44,6 +47,11 @@ function wc_early_tickets_make_early() {
 		add_action( 'woocommerce_order_status_on-hold_to_processing_notification', array($event_ticket, 'generate_tickets') );
 		add_action( 'woocommerce_order_status_failed_to_processing_notification', array($event_ticket, 'generate_tickets') );
 	}
+	*/
+}
+
+function wc_early_ticket_email() {
+
 }
 
 add_action('admin_menu', 'wc_early_ticket_load_admin_menu');
